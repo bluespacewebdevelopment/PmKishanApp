@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: mycolor),
       darkTheme: ThemeData(brightness: Brightness.dark),
+      home: Scaffold(
+        appBar: AppBar(title: Text('My App'),),),
     );
   }
 }
