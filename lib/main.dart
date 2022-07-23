@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color: Colors.lightBlueAccent,
 
-      title: 'PM Kishan',
+      title: 'PM Kishan yojana heiodod',
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
