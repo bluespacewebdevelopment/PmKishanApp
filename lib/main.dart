@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.lightBlueAccent,
+
       title: 'PM Kishan',
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
