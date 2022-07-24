@@ -45,6 +45,13 @@ dependencies:
   gradle_properties: ^1.0.0
   provider: ^6.0.3
   awesome_notifications: ^0.6.21
+  advanced_icon: ^0.1.2
+  sn_progress_dialog: ^1.0.8
+
+  android_intent: ^2.0.2
+  android_intent_plus: ^3.1.1
+  platform: ^3.1.0
+  webview_flutter: ^3.0.4
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pm_kishan_app/pages/StartPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(title: Text('My App'),),),
+      initialRoute: 'start',
+      routes: {
+        'start':(context)=>StartPage(),
+      },
     );
   }
 }
