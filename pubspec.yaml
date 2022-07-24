@@ -47,11 +47,15 @@ dependencies:
   awesome_notifications: ^0.6.21
   advanced_icon: ^0.1.2
   sn_progress_dialog: ^1.0.8
-
   android_intent: ^2.0.2
   android_intent_plus: ^3.1.1
   platform: ^3.1.0
   webview_flutter: ^3.0.4
+  share: ^2.0.4
+  share_plus: ^4.0.10
+  path_provider: ^2.0.11
+  url_launcher: ^6.1.5
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
@@ -61,8 +65,8 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/icons/logo.png"
-#  adaptive_icon_foreground: "assets/icons/foreground_icon.png"
-#  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/logo.png"
+  adaptive_icon_background: "#ffffff"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
