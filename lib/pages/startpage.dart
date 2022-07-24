@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:platform/platform.dart';
 import 'package:pm_kishan_app/main.dart';
-import 'package:pm_kishan_app/pages/HomePage.dart';
+import 'package:pm_kishan_app/pages/homepage.dart';
 import 'package:share/share.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -16,8 +17,6 @@ class StartPage extends StatefulWidget {
 }
 
 class _StartPageState extends State<StartPage> {
-
-  List<String> imagePaths = [];
 
   void _Send(){
     AndroidIntent intent = AndroidIntent(
@@ -31,7 +30,8 @@ class _StartPageState extends State<StartPage> {
     }
   }
 
-  void _shareContent() async {
+  static void _shareContent() async {
+    List<String> imagePaths = [];
     final appurl= 'https://images.yourstory.com/cs/5/f02aced0d86311e98e0865c1f0fe59a2/indian-farmer-1610471656527.png?fm=auto&ar=2:1&mode=crop&crop=faces&w=1270';
     final url = Uri.parse(appurl);
     final response = await http.get(url);
@@ -40,11 +40,10 @@ class _StartPageState extends State<StartPage> {
     final path = '${temp.path}/image.jpg';
     imagePaths.add(path);
     Share.share('https://play.google.com/store/apps/details?id=com.pm_kisan_samman_nidhi_yojna_app'
-        ,subject: 'Pm Kishan Yojana',);
+        ,subject: 'PM Kishan Yojana',);
     // File(imagePaths).writeasBytesSync(bytes);
     // await Share.shareFiles([imagePaths[0]], text: 'My Images', subject: "Enjoy");
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -82,14 +81,12 @@ progressDialog.close();*/
                 )),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.max,
             children: [
-              SizedBox(
-                width: 10,
-              ),
               Container(
                 padding: EdgeInsets.only(left: 11, right: 11),
                 height: 100,
@@ -132,9 +129,6 @@ progressDialog.close();*/
                   ],
                 ),
               ),
-              SizedBox(
-                width: 10,
-              ),
               Container(
                 padding: EdgeInsets.only(left: 11, right: 11),
                 height: 100,
@@ -174,9 +168,6 @@ progressDialog.close();*/
                     )
                   ],
                 ),
-              ),
-              SizedBox(
-                width: 10,
               ),
               Container(
                 padding: EdgeInsets.only(left: 11, right: 11),

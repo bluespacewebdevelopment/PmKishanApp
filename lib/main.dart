@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pm_kishan_app/pages/StartPage.dart';
+import 'package:pm_kishan_app/pages/startpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +14,13 @@ class MyApp extends StatelessWidget {
     MaterialColor mycolor = MaterialColor(0xFF10e341, color);
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'PM Kishan',
       themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: mycolor),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      home: Scaffold(
-        appBar: AppBar(title: Text('My App'),),),
+      home: StartPage(),
       initialRoute: 'start',
       routes: {
-        'start':(context)=>StartPage(),
+        'start':(context) => StartPage(),
       },
     );
   }
