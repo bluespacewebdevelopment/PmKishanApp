@@ -55,32 +55,29 @@ class _HomePageState extends State<HomePage> {
               child: ListTile(
                 leading: Container(
                     width: 95,
-                    height: 95,
-                    child: Image.asset(
-                      'assets/icons/app_logo.png',
-                      fit: BoxFit.cover,
-                    )),
+                    child: Image.asset('assets/icons/app_logo.png', fit: BoxFit.cover,)),
                 textColor: Colors.black,
-                title: Text(
-                  "प्रधानमंत्री किसान सम्मान निधि योजना",
-                ),
-                subtitle: Text('_____________________'),
+                title: Text("प्रधानमंत्री किसान सम्मान निधि योजना",style: TextStyle(color: Colors.white),),
+                subtitle: Text('किसानो की समृद्धि हमारी जिम्मेदारी',style: TextStyle(color: Colors.white)),
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  GridView.count(
-                    scrollDirection: Axis.vertical,
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 4,
-                    mainAxisSpacing: 5,
-                    children: List.generate(choices.length, (index) {
-                      return Center(child: SelectCard(choice: choices[index]),);
-                    }),
-                  ),
-                ],
+            Expanded(
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.vertical,
+                child: GridView.count(
+                  physics: ScrollPhysics(),
+                  padding: EdgeInsets.all(15),
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 4,
+                  mainAxisSpacing: 5,
+                  children: List.generate(choices.length, (index) {
+                    return Center(child: SelectCard(choice: choices[index],));
+                    // return Card(child: Icon(Icons.home),);
+                  }),
+                ),
               ),
             ),
           ],
@@ -98,7 +95,11 @@ class Choice{
 }
  List<Choice> choices = <Choice>[
   Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
-  Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
+  Choice(title: 'likh dena bhai', subtitle: 'Main Page' ,icon: Icons.person),
+  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.fingerprint),
+  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.document_scanner),
+  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.card_giftcard),
+  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.home_mini),
 ];
 
 class SelectCard extends StatelessWidget {
@@ -108,14 +109,20 @@ class SelectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 7,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
       color: Colors.white,
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Expanded(child: Icon(choice.icon,size: 10,color: Colors.black)),
-            Text(choice.title,style: TextStyle(fontSize: 15),),
-            Text(choice.subtitle,style: TextStyle(fontSize: 10),),
+            Expanded(child: CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 30
+                ,child: Icon(choice.icon,size: 45,color: Colors.white))),
+            Text(choice.title,style: TextStyle(fontSize: 25)),
+            Text(choice.subtitle,style: TextStyle(fontSize: 17)),
           ],
         ),
       ),

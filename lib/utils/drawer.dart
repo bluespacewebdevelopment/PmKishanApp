@@ -21,21 +21,6 @@ class _MydrawerState extends State<Mydrawer> {
       backgroundColor: Colors.white,
       child: ListView(
         children: [
-          Container(
-            color: Colors.lightGreenAccent,
-            child: Row(
-              children: <Widget>[
-              Expanded(
-                child: Text("PM Kisan Samman Nidhi",
-                  textAlign: TextAlign.center,
-                  style:TextStyle(
-                    color: Colors.brown,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),),
-              )
-            ],),
-          ),
           DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage("assets/images/farmer.jpg",),fit: BoxFit.fitWidth),
@@ -53,13 +38,13 @@ class _MydrawerState extends State<Mydrawer> {
               ),
               child: Container(
                 padding: EdgeInsets.only(bottom: 0,top: 110),
-                child: Text("PM Kisan Samman Nidhi",
-                  textAlign: TextAlign.center,
-                  style:TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),),
+                // child: Text("PM Kisan Samman Nidhi",
+                //   textAlign: TextAlign.center,
+                //   style:TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 20,
+                //     fontWeight: FontWeight.bold,
+                //   ),),
               )
           ),
 
