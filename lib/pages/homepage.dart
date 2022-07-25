@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                        child: Center(child: Text('पीएम किसान सम्मान निधि योजना क्या है ',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
                       ),
                     ),
                     Padding(
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                        child: Center(child: Text('अपने गांव की लिस्ट देखें',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
                       ),
                     ),
                     Padding(
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                        child: Center(child: Text('ई-श्रम कार्ड रजिस्ट्रेशन',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
                       ),
                     ),
                     Padding(
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                        child: Center(child: Text('अन्य सेवाएं',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
                       ),
                     ),
                   ],
