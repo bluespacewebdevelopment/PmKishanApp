@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pm_kishan_app/pages/main_page.dart';
 import 'package:pm_kishan_app/pages/startpage.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'start',
       routes: {
         'start':(context) => StartPage(),
+        'main_page':(context) => MainPage(),
       },
     );
   }

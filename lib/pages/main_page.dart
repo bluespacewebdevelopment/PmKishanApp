@@ -10,7 +10,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
 
-
 web_view(){
 
 }
@@ -61,9 +60,7 @@ web_view(){
             ),
             SizedBox(height: 10,),
             ElevatedButton(
-              onPressed: () {
-
-  },
+              onPressed: () {},
               style: ButtonStyle(
                 side: MaterialStateBorderSide.resolveWith(
                         (states) => BorderSide(width: 1, color: Theme.of(context).primaryColor)),

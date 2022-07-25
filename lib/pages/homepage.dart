@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pm_kishan_app/pages/main_page.dart';
 import 'package:pm_kishan_app/utils/drawer.dart';
 import 'package:share/share.dart';
-
 import '../main.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,8 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   void shareApp() async {
-    Share.share(
-        'https://play.google.com/store/apps/details?id=com.pm_kisan_samman_nidhi_yojna_app',
+    Share.share('https://play.google.com/store/apps/details?id=com.pm_kisan_samman_nidhi_yojna_app',
         subject: 'PM Kishan Yojana');
   }
 
@@ -78,10 +77,141 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 4,
                       mainAxisSpacing: 5,
-                      children: List.generate(choices.length, (index) {
-                        return Center(child: SelectCard(choice: choices[index],));
+                      children: [
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                                    icon: Icon(Icons.home,size: 30,color: Colors.white))),
+                                SizedBox(height: 15),
+                                Text('मुख्य पेज',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                                Text('Main Page',style: TextStyle(fontSize: 13,)),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                    icon: Icon(Icons.person,size: 30,color: Colors.white))),
+                                SizedBox(height: 15),
+                                Text('नया पंजीकरण करें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                                Text('New Farmer Registration',style: TextStyle(fontSize: 13,)),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                    icon: Icon(Icons.fingerprint,size: 30,color: Colors.white))),
+                                SizedBox(height: 15),
+                                Text('आधार कार्ड लिंक करें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                                Text('PM Farmer eKYC',style: TextStyle(fontSize: 13,)),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                    icon: Icon(Icons.file_copy_sharp,size: 30,color: Colors.white))),
+                                SizedBox(height: 15),
+                                Text('अपना खाता देखें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                                Text('View Your Account',style: TextStyle(fontSize: 13,)),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                    icon: Icon(Icons.card_travel_sharp,size: 30,color: Colors.white))),
+                                SizedBox(height: 15),
+                                Text('नरेगा जॉब कार्ड',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                                Text('Narega Yojana',style: TextStyle(fontSize: 13,)),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        Card(
+                          margin: EdgeInsets.all(10),
+                          elevation: 15,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                  icon: Icon(Icons.home_work,size: 30,color: Colors.white))),
+                              SizedBox(height: 15),
+                              Text('शौचालय योजना',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                              Text('Toilet Scheme',style: TextStyle(fontSize: 13,)),
+                            ],
+                          ),
+                        ),
+                      ],
+                      // children: List.generate(choices.length, (index) {
+                        // return Center(child: SelectCard(choice: choices[index],));
                         // return Card(child: Icon(Icons.home),);
-                      }),
+                      // }),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
@@ -150,50 +280,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-class Choice{
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  Choice({required this.title, required this.subtitle, required this.icon});
-}
- List<Choice> choices = <Choice>[
-  Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
-  Choice(title: 'नया पंजीकरण करें', subtitle: 'New Farmer Registration' ,icon: Icons.person),
-  Choice(title: 'आधार कार्ड लिंक करें', subtitle: 'PM Farmer eKYC' ,icon: Icons.fingerprint),
-  Choice(title: 'अपना खाता देखें', subtitle: 'View Your Account' ,icon: Icons.file_copy_sharp),
-  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Narega Yojana' ,icon: Icons.card_travel_sharp),
-  Choice(title: 'शौचालय योजना', subtitle: 'Toilet Scheme' ,icon: Icons.home_work),
-];
-
-class SelectCard extends StatelessWidget {
-  const SelectCard({Key? key,required this.choice}) : super(key: key);
-  final Choice choice;
-
-  @override
-  Widget build(BuildContext context) {
-    MaterialColor mycolor3 = MaterialColor(0xFF23D806, color);
-    return Card(
-      margin: EdgeInsets.all(10),
-      elevation: 15,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25),
-      ),
-      color: Colors.white,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25
-                ,child: Icon(choice.icon,size: 35,color: Colors.white)),
-            SizedBox(height: 15),
-            Text(choice.title,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-            Text(choice.subtitle,style: TextStyle(fontSize: 13,)),
-          ],
-        ),
-      ),
-    );
-  }
-}
-

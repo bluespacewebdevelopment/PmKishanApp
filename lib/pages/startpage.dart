@@ -100,8 +100,7 @@ progressDialog.close();*/
                         borderRadius: BorderRadius.circular(18.0),
                       ),),
                     elevation: MaterialStateProperty.all(0),
-                    padding: MaterialStateProperty.all(EdgeInsets.zero),
-                      backgroundColor: MaterialStateProperty.all(Colors.transparent.withOpacity(0)),
+                    backgroundColor: MaterialStateProperty.all(Colors.transparent.withOpacity(0)),
                   ),
                      child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
