@@ -18,17 +18,7 @@ class StartPage extends StatefulWidget {
 
 class _StartPageState extends State<StartPage> {
 
-  void _Send(){
-    AndroidIntent intent = AndroidIntent(
-      action: 'android.intent.action.ACTION_SEND',
-      data: "my name is bhagchand jat",
-      type: 'message/rfc822',
-    );
-    if (const LocalPlatform().isAndroid) {
-      print("Heloo");
-      intent.launch();
-    }
-  }
+
 
   static void _shareContent() async {
     List<String> imagePaths = [];

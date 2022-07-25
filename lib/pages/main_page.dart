@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pm_kishan_app/pages/web_view.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -24,7 +25,9 @@ web_view(){
             Text("किसान सम्मान योजना",style:TextStyle(fontSize: 24,color: Colors.black)),
             Divider(thickness: 2, height: 4, color: Colors.black,),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Web_View(url: 'https://flutter.dev',)));
+              },
               style: ButtonStyle(
                 side: MaterialStateBorderSide.resolveWith(
                         (states) => BorderSide(width: 1, color: Theme.of(context).primaryColor)),
