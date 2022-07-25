@@ -22,8 +22,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'PM Kishan Yojana',
+        elevation: 0.2,
+        title: Text('PM Kishan Yojana',
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20,right: 20,top: 15),
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 15,bottom: 70),
                       child: Container(
                         height: 75,width: 360,
                         decoration: BoxDecoration(
@@ -132,7 +132,12 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                        child: Center(child: Text('अन्य सेवाएं',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                          // Text('अन्य सेवाएं'
+                        child: ListTile(
+                          leading: Container(child: Icon(Icons.flash_on,color: Colors.yellow,size: 40,)),
+                          subtitle: Text('Other Services',textAlign: TextAlign.center, style: TextStyle(fontSize: 15),),
+                          title: Text('अन्य सेवाएं',textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.grey.shade900),),
+                        ),
                       ),
                     ),
                   ],
@@ -169,9 +174,10 @@ class SelectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     MaterialColor mycolor3 = MaterialColor(0xFF23D806, color);
     return Card(
-      elevation: 10,
+      margin: EdgeInsets.all(10),
+      elevation: 15,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(25),
       ),
       color: Colors.white,
       child: Center(
@@ -183,7 +189,7 @@ class SelectCard extends StatelessWidget {
                 ,child: Icon(choice.icon,size: 35,color: Colors.white)),
             SizedBox(height: 15),
             Text(choice.title,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-            Text(choice.subtitle,style: TextStyle(fontSize: 15,)),
+            Text(choice.subtitle,style: TextStyle(fontSize: 13,)),
           ],
         ),
       ),
