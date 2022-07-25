@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
+                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () { Navigator.pushNamed(context, 'main_page'); },
                                     icon: Icon(Icons.person,size: 30,color: Colors.white))),
                                 SizedBox(height: 15),
                                 Text('नया पंजीकरण करें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
