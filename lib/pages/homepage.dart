@@ -95,11 +95,11 @@ class Choice{
 }
  List<Choice> choices = <Choice>[
   Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
-  Choice(title: 'likh dena bhai', subtitle: 'Main Page' ,icon: Icons.person),
-  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.fingerprint),
-  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.document_scanner),
-  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.card_giftcard),
-  Choice(title: 'likh dena bhai ', subtitle: 'Main Page' ,icon: Icons.home_mini),
+  Choice(title: नया पंजीकरण करें', subtitle: 'Main Page' ,icon: Icons.person),
+  Choice(title: 'आधार कार्ड लिंक करें ', subtitle: 'Main Page' ,icon: Icons.fingerprint),
+  Choice(title: 'अपना खाता देखें', subtitle: 'Main Page' ,icon: Icons.document_scanner),
+  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Main Page' ,icon: Icons.card_giftcard),
+  Choice(title: 'शौचालय योजना ', subtitle: 'Main Page' ,icon: Icons.home_mini),
 ];
 
 class SelectCard extends StatelessWidget {
