@@ -95,11 +95,11 @@ class Choice{
 }
  List<Choice> choices = <Choice>[
   Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
-  Choice(title: 'नया पंजीकरण करें', subtitle: 'Main Page' ,icon: Icons.person),
-  Choice(title: 'आधार कार्ड लिंक करें', subtitle: 'Main Page' ,icon: Icons.fingerprint),
-  Choice(title: 'अपना खाता देखें', subtitle: 'Main Page' ,icon: Icons.document_scanner),
-  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Main Page' ,icon: Icons.card_giftcard),
-  Choice(title: 'शौचालय योजना ', subtitle: 'Main Page' ,icon: Icons.home_mini),
+  Choice(title: 'नया पंजीकरण करें', subtitle: 'New Farmer Registration' ,icon: Icons.person),
+  Choice(title: 'आधार कार्ड लिंक करें', subtitle: 'PM Farmer eKYC' ,icon: Icons.fingerprint),
+  Choice(title: 'अपना खाता देखें', subtitle: 'View Your Account' ,icon: Icons.document_scanner),
+  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Narega Yojana' ,icon: Icons.card_giftcard),
+  Choice(title: 'शौचालय योजना', subtitle: 'Toilet Scheme' ,icon: Icons.home_mini),
 ];
 
 class SelectCard extends StatelessWidget {
@@ -116,12 +116,13 @@ class SelectCard extends StatelessWidget {
       color: Colors.white,
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Expanded(child: CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 30
-                ,child: Icon(choice.icon,size: 45,color: Colors.white))),
-            Text(choice.title,style: TextStyle(fontSize: 25)),
+            CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 30
+                ,child: Icon(choice.icon,size: 45,color: Colors.white)),
+            SizedBox(height: 15),
+            Text(choice.title,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
             Text(choice.subtitle,style: TextStyle(fontSize: 17)),
           ],
         ),

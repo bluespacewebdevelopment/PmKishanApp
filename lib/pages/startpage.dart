@@ -88,13 +88,12 @@ progressDialog.close();*/
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                padding: EdgeInsets.only(left: 11, right: 11),
-                height: 100,
+                height: 100,width: 100,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(11),
+                  borderRadius: BorderRadius.circular(18),
                   shape: BoxShape.rectangle,
                   gradient: LinearGradient(
-                    colors: [Colors.white, Colors.orange, Theme.of(context).primaryColor],
+                    colors: [Colors.white, Colors.orange, Colors.lightGreenAccent],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -103,40 +102,40 @@ progressDialog.close();*/
                       width: 1,
                       style: BorderStyle.solid),
                 ),
-                child: Column(
-                  children: [
-                    Card(
-                      child: IconButton(
-                        icon: Icon(
+                child: ElevatedButton(
+                  onPressed: () async { _shareContent(); },
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      ),),
+                    elevation: MaterialStateProperty.all(0),
+                    padding: MaterialStateProperty.all(EdgeInsets.zero),
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent.withOpacity(0)),
+                  ),
+                     child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
                           Icons.share,
                           size: 50,
                           color: Colors.brown,
                         ),
-                        color: Colors.brown[700],
-                        onPressed: () async {
-                          _shareContent();
-                          // await Share.share('Share This One', subject: "here is my subject ");
-                          // AndroidIntent intent = AndroidIntent(
-                          //     action: 'android.intent.action.ACTION_SEND');
-                        },
-                        iconSize: 50,
-                      ),
-                    ),
-                    Text(
-                      "Share",
-                      style: TextStyle(fontSize: 14, color: Colors.black45),
-                    )
-                  ],
+                      Text(
+                        "Share",
+                        style: TextStyle(fontSize: 14, color: Colors.black45),
+                      )
+                    ],
+                  ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.only(left: 11, right: 11),
-                height: 100,
+                height: 100,width: 100,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(11),
+                  borderRadius: BorderRadius.circular(18.0),
                   shape: BoxShape.rectangle,
                   gradient: LinearGradient(
-                    colors: [Colors.white, Colors.orange, Theme.of(context).primaryColor],
+                    colors: [Colors.white, Colors.orange, Colors.lightGreenAccent],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -145,38 +144,39 @@ progressDialog.close();*/
                       width: 1,
                       style: BorderStyle.solid),
                 ),
-                child: Column(
-                  children: [
-                    Card(
-                      child: IconButton(
-                        icon: Icon(
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),),
+                      elevation: MaterialStateProperty.all(0),
+                      padding: MaterialStateProperty.all(EdgeInsets.zero),
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                      shadowColor: MaterialStateProperty.all(Colors.transparent) ),
+                  onPressed: () {  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                     Icon(
                           Icons.star_half,
                           size: 50,
-                          color: Colors.brown,
+                          color: Colors.brown[700],
                         ),
-                        color: Colors.brown[700],
-                        onPressed: () {
-                          AndroidIntent intent = AndroidIntent(
-                              action: 'android.intent.action.ACTION_SEND');
-                        },
-                        iconSize: 50,
-                      ),
-                    ),
-                    Text(
-                      "Rate Us",
-                      style: TextStyle(fontSize: 14, color: Colors.black45),
-                    )
-                  ],
+                      Text("Rate Us",
+                        style: TextStyle(fontSize: 15, color: Colors.black45),textAlign: TextAlign.center,)
+                    ],
+                  ),
                 ),
               ),
               Container(
                 padding: EdgeInsets.only(left: 11, right: 11),
-                height: 100,
+                height: 100,width: 100,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(11),
+                  borderRadius: BorderRadius.circular(18.0),
                   shape: BoxShape.rectangle,
                   gradient: LinearGradient(
-                    colors: [Colors.white, Colors.orange, Theme.of(context).primaryColor],
+                    colors: [Colors.white, Colors.orange, Colors.lightGreenAccent],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -185,27 +185,31 @@ progressDialog.close();*/
                       width: 1,
                       style: BorderStyle.solid),
                 ),
-                child: Column(
-                  children: [
-                    Card(
-                      child: IconButton(
-                        icon: Icon(
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),),
+                      elevation: MaterialStateProperty.all(0),
+                      padding: MaterialStateProperty.all(EdgeInsets.zero),
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                      shadowColor: MaterialStateProperty.all(Colors.transparent) ),
+                  onPressed: () {  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
                           Icons.folder,
                           size: 50,
                           color: Colors.brown,
                         ),
-                        color: Colors.brown[700],
-                        onPressed: () {
-                          _Send();
-                        },
-                        iconSize: 50,
-                      ),
-                    ),
-                    Text(
-                      "More App",
-                      style: TextStyle(fontSize: 14, color: Colors.black45),
-                    )
-                  ],
+                      Text(
+                        "More App",
+                        style: TextStyle(fontSize: 14, color: Colors.black45),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
