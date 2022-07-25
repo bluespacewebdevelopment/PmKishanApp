@@ -11,12 +11,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    MaterialColor mycolor = MaterialColor(0xFF4A0404, color);
+    MaterialColor mycolor = MaterialColor(0xFF128500, color);
     MaterialColor mycolor2 = MaterialColor(0xFF800020, color);
+    MaterialColor mycolor3 = MaterialColor(0xFF23D806, color);
+
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: mycolor2,
+      theme: ThemeData(primarySwatch: mycolor,
       fontFamily: 'myfont'),
       darkTheme: ThemeData(brightness: Brightness.dark),
       home: StartPage(),
