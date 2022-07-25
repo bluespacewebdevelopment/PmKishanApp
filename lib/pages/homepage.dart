@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pm_kishan_app/utils/drawer.dart';
 import 'package:share/share.dart';
 
+import '../main.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 
@@ -49,6 +51,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
               color: Theme.of(context).primaryColor,
@@ -65,18 +68,74 @@ class _HomePageState extends State<HomePage> {
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
-                child: GridView.count(
-                  physics: ScrollPhysics(),
-                  padding: EdgeInsets.all(15),
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 4,
-                  mainAxisSpacing: 5,
-                  children: List.generate(choices.length, (index) {
-                    return Center(child: SelectCard(choice: choices[index],));
-                    // return Card(child: Icon(Icons.home),);
-                  }),
+                child: Column(
+                  children: [
+                    GridView.count(
+                      physics: ScrollPhysics(),
+                      padding: EdgeInsets.all(15),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 4,
+                      mainAxisSpacing: 5,
+                      children: List.generate(choices.length, (index) {
+                        return Center(child: SelectCard(choice: choices[index],));
+                        // return Card(child: Icon(Icons.home),);
+                      }),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                      child: Container(
+                        height: 45,width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              color: Colors.black,
+                              width: 2,
+                              style: BorderStyle.solid),),
+                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 15),
+                      child: Container(
+                        height: 45,width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              color: Colors.black,
+                              width: 2,
+                              style: BorderStyle.solid),),
+                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 15),
+                      child: Container(
+                        height: 45,width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              color: Colors.black,
+                              width: 2,
+                              style: BorderStyle.solid),),
+                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20,top: 15),
+                      child: Container(
+                        height: 75,width: 360,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                              color: Colors.black,
+                              width: 2,
+                              style: BorderStyle.solid),),
+                        child: Center(child: Text('Hello',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),)),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -97,9 +156,9 @@ class Choice{
   Choice(title: 'मुख्य पेज', subtitle: 'Main Page' ,icon: Icons.home),
   Choice(title: 'नया पंजीकरण करें', subtitle: 'New Farmer Registration' ,icon: Icons.person),
   Choice(title: 'आधार कार्ड लिंक करें', subtitle: 'PM Farmer eKYC' ,icon: Icons.fingerprint),
-  Choice(title: 'अपना खाता देखें', subtitle: 'View Your Account' ,icon: Icons.document_scanner),
-  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Narega Yojana' ,icon: Icons.card_giftcard),
-  Choice(title: 'शौचालय योजना', subtitle: 'Toilet Scheme' ,icon: Icons.home_mini),
+  Choice(title: 'अपना खाता देखें', subtitle: 'View Your Account' ,icon: Icons.file_copy_sharp),
+  Choice(title: 'नरेगा जॉब कार्ड', subtitle: 'Narega Yojana' ,icon: Icons.card_travel_sharp),
+  Choice(title: 'शौचालय योजना', subtitle: 'Toilet Scheme' ,icon: Icons.home_work),
 ];
 
 class SelectCard extends StatelessWidget {
@@ -108,8 +167,9 @@ class SelectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MaterialColor mycolor3 = MaterialColor(0xFF23D806, color);
     return Card(
-      elevation: 7,
+      elevation: 10,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
@@ -119,11 +179,11 @@ class SelectCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 30
-                ,child: Icon(choice.icon,size: 45,color: Colors.white)),
+            CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25
+                ,child: Icon(choice.icon,size: 35,color: Colors.white)),
             SizedBox(height: 15),
             Text(choice.title,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-            Text(choice.subtitle,style: TextStyle(fontSize: 17)),
+            Text(choice.subtitle,style: TextStyle(fontSize: 15,)),
           ],
         ),
       ),
