@@ -283,7 +283,7 @@ class _HomePageState extends State<HomePage> {
                               width: 2,
                               style: BorderStyle.solid),),
                         child: Center(child: TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://pmkisan.gov.in/Rpt_BeneficiaryStatus_pub.aspx',))); },
-                        child: Text('अपने गांव की लिस्ट देखें',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),))),
+                        child: Text('अपने गांव की लिस्ट देखें',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Colors.black),))),
                       ),
                     ),
                     Padding(
@@ -297,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                               width: 2,
                               style: BorderStyle.solid),),
                         child: Center(child: TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://maandhan.in/shramyogi',))); },
-                        child: Text('ई-श्रम कार्ड रजिस्ट्रेशन',textAlign: TextAlign.center,style: TextStyle(fontSize: 20),))),
+                        child: Text('ई-श्रम कार्ड रजिस्ट्रेशन',textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Colors.black),))),
                       ),
                     ),
                     Padding(
@@ -310,12 +310,11 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black,
                               width: 2,
                               style: BorderStyle.solid),),
-                          // Text('अन्य सेवाएं'
                         child: ListTile(
                           leading: Container(child: Icon(Icons.flash_on,color: Colors.yellow,size: 40,)),
                           subtitle: Text('Other Services',textAlign: TextAlign.center, style: TextStyle(fontSize: 15),),
-                          title: TextButton(onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html',))); },
-                          child: Text('अन्य सेवाएं',textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.grey.shade900),)),
+                          title: Text('अन्य सेवाएं',textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.grey.shade900),),
+                          onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html',)));}
                         ),
                       ),
                     ),
