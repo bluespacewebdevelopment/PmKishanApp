@@ -25,21 +25,28 @@ class _Web_ViewState extends State<Web_View> {
       ),
       body: Column(
           children: [
-            webprogress<1?
-            SizedBox(
-              child: LinearProgressIndicator(
-                value: webprogress,
-                color: Colors.red,
-                backgroundColor: Colors.black,
-              ),
-            ):SizedBox(),
+            webprogress<1 ?
+            Column(
+              children: [
+                SizedBox(
+                  child: LinearProgressIndicator(
+                    value: webprogress,
+                    color: Colors.red,
+                    backgroundColor: Colors.black,
+                  ),
+                ),
+                Container(
+                    padding: EdgeInsets.only(top: 330,bottom: 200),
+                    child: CircularProgressIndicator(color: Colors.red))
+              ],
+            )  : SizedBox(),
             Expanded(
               child: WebView(
                 initialUrl: url,
                 javascriptMode: JavascriptMode.unrestricted,
                 onProgress:(progress){
                   setState(() {
-                    this.webprogress=progress/100;
+                    this.webprogress = progress/100;
                   });
                 },
               ),
