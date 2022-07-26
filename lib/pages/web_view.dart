@@ -31,6 +31,13 @@ class _Web_ViewState extends State<Web_View> {
           this.controller=controller;
         },
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          controller.loadUrl('https://www.youtube.com/channel/UC7LI0mBeuP5zzrCf8t-vNlg');
+
+        },
+        child: Icon(Icons.import_export),
+      ),
     );
   }
 }
