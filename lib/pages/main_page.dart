@@ -65,7 +65,7 @@ web_view(){
                 ),
                 SizedBox(height: 10,),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://exlink.pmkisan.gov.in/aadharekyc.aspx',)));},
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.redAccent),
                     side: MaterialStateBorderSide.resolveWith(

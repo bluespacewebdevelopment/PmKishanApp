@@ -10,10 +10,7 @@ class Web_View extends StatefulWidget {
 
 class _Web_ViewState extends State<Web_View> {
   String url;
- late WebViewController controller;
-
   _Web_ViewState(this.url);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +20,16 @@ class _Web_ViewState extends State<Web_View> {
         foregroundColor: Colors.black,
         elevation: 0.2,
       ),
-      body:
-      WebView(
+      body: WebView(
         initialUrl: url,
         javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (controller){
-          this.controller=controller;
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          controller.loadUrl('https://www.youtube.com/channel/UC7LI0mBeuP5zzrCf8t-vNlg');
+
         },
+        child: Icon(Icons.import_export),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
