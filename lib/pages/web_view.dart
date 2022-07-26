@@ -11,10 +11,11 @@ class Web_View extends StatefulWidget {
 class _Web_ViewState extends State<Web_View> {
   String url;
   late WebViewController controller;
-
+  double webprogress=0;
   _Web_ViewState(this.url);
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text('किसान सम्मान निधि'),
@@ -22,10 +23,30 @@ class _Web_ViewState extends State<Web_View> {
         foregroundColor: Colors.black,
         elevation: 0.2,
       ),
-      body: WebView(
-        initialUrl: url,
-        javascriptMode: JavascriptMode.unrestricted,
-      ),
+      body: Column(
+          children: [
+            webprogress<1?
+            SizedBox(
+              child: LinearProgressIndicator(
+                value: webprogress,
+                color: Colors.red,
+                backgroundColor: Colors.black,
+              ),
+            ):SizedBox(),
+            Expanded(
+              child: WebView(
+                initialUrl: url,
+                javascriptMode: JavascriptMode.unrestricted,
+                onProgress:(progress){
+                  setState(() {
+                    this.webprogress=progress/100;
+                  });
+                },
+              ),
+            ),
+          ],
+        ),
+   
 
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
