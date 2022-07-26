@@ -78,135 +78,182 @@ class _HomePageState extends State<HomePage> {
                       crossAxisSpacing: 4,
                       mainAxisSpacing: 5,
                       children: [
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () { Navigator.pushNamed(context, 'main_page'); },
-                                    icon: Icon(Icons.home,size: 30,color: Colors.white))),
-                                SizedBox(height: 15),
-                                Text('मुख्य पेज',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                                Text('Main Page',style: TextStyle(fontSize: 13,)),
-                              ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.home,size: 30,color: Colors.white)),
+                                    SizedBox(height: 15),
+                                    Text('मुख्य पेज',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                    Text('Main Page',style: TextStyle(fontSize: 10,)),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                         ),
 
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () { Navigator.pushNamed(context, 'main_page'); },
-                                    icon: Icon(Icons.person,size: 30,color: Colors.white))),
-                                SizedBox(height: 15),
-                                Text('नया पंजीकरण करें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                                Text('New Farmer Registration',style: TextStyle(fontSize: 13,)),
-                              ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.person,size: 30,color: Colors.white)),
+                                  SizedBox(height: 15),
+                                  Text('नया पंजीकरण करें',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                  Text('New Farmer Registration',style: TextStyle(fontSize: 10,)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
 
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
-                                    icon: Icon(Icons.fingerprint,size: 30,color: Colors.white))),
-                                SizedBox(height: 15),
-                                Text('आधार कार्ड लिंक करें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                                Text('PM Farmer eKYC',style: TextStyle(fontSize: 13,)),
-                              ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.fingerprint,size: 30,color: Colors.white)),
+                                    SizedBox(height: 15),
+                                    Text('आधार कार्ड लिंक करें',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                    Text('PM Farmer eKYC',style: TextStyle(fontSize: 10,)),
+                                  ],
+                                )
                             ),
                           ),
                         ),
 
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
-                                    icon: Icon(Icons.file_copy_sharp,size: 30,color: Colors.white))),
-                                SizedBox(height: 15),
-                                Text('अपना खाता देखें',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                                Text('View Your Account',style: TextStyle(fontSize: 13,)),
-                              ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.file_copy_sharp,size: 30,color: Colors.white)),
+                                  SizedBox(height: 15),
+                                  Text('अपना खाता देखें',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                  Text('View Your Account',style: TextStyle(fontSize: 10,)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
 
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
-                                    icon: Icon(Icons.card_travel_sharp,size: 30,color: Colors.white))),
-                                SizedBox(height: 15),
-                                Text('नरेगा जॉब कार्ड',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                                Text('Narega Yojana',style: TextStyle(fontSize: 13,)),
-                              ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.card_travel_sharp,size: 30,color: Colors.white)),
+                                  SizedBox(height: 15),
+                                  Text('नरेगा जॉब कार्ड',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                  Text('Narega Yojana',style: TextStyle(fontSize: 10,)),
+                                ],
+                              ),
                             ),
                           ),
                         ),
 
-                        Card(
+                        Container(
                           margin: EdgeInsets.all(10),
-                          elevation: 15,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: IconButton(onPressed: () {  },
-                                  icon: Icon(Icons.home_work,size: 30,color: Colors.white))),
-                              SizedBox(height: 15),
-                              Text('शौचालय योजना',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-                              Text('Toilet Scheme',style: TextStyle(fontSize: 13,)),
-                            ],
+                          padding: EdgeInsets.zero,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),),
+                              elevation: MaterialStateProperty.all(10),
+                              backgroundColor: MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () { Navigator.pushNamed(context, 'main_page'); },
+                            child: Card(
+                              elevation: 0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  CircleAvatar(backgroundColor: Theme.of(context).primaryColor,radius: 25,child: Icon(Icons.home_work,size: 30,color: Colors.white)),
+                                  SizedBox(height: 15),
+                                  Text('शौचालय योजना',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold)),
+                                  Text('Toilet Scheme',style: TextStyle(fontSize: 10,)),
+                                ],
+                              ),
+                            ),
                           ),
                         ),
+
                       ],
                       // children: List.generate(choices.length, (index) {
                         // return Center(child: SelectCard(choice: choices[index],));
