@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Web_View extends StatefulWidget {
   Web_View({Key? key, required this.url}) : super(key: key);
- final String url;
+  final String url;
   @override
   State<Web_View> createState() => _Web_ViewState(this.url);
 }
