@@ -255,10 +255,7 @@ class _HomePageState extends State<HomePage> {
                         ),
 
                       ],
-                      // children: List.generate(choices.length, (index) {
-                        // return Center(child: SelectCard(choice: choices[index],));
-                        // return Card(child: Icon(Icons.home),);
-                      // }),
+
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
