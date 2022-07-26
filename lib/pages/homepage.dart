@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pm_kishan_app/pages/main_page.dart';
 import 'package:pm_kishan_app/utils/drawer.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import '../main.dart';
 import '../utils/demo.dart';
 
