@@ -10,7 +10,10 @@ class Web_View extends StatefulWidget {
 
 class _Web_ViewState extends State<Web_View> {
   String url;
+ late WebViewController controller;
+
   _Web_ViewState(this.url);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +23,13 @@ class _Web_ViewState extends State<Web_View> {
         foregroundColor: Colors.black,
         elevation: 0.2,
       ),
-      body: WebView(
+      body:
+      WebView(
         initialUrl: url,
         javascriptMode: JavascriptMode.unrestricted,
+        onWebViewCreated: (controller){
+          this.controller=controller;
+        },
       ),
     );
   }
