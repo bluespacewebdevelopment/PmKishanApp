@@ -26,7 +26,7 @@ web_view(){
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                // Divider(thickness: 2, height: 4, color: Colors.black,),
+
                 SizedBox(height: 10,),
                 ElevatedButton(
                   onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Web_View(url: 'https://pmkisan.gov.in/BeneficiaryStatus.aspx',)));},

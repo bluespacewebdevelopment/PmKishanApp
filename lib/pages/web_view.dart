@@ -16,64 +16,26 @@ class _Web_ViewState extends State<Web_View> {
   bool flag = false;
   late WebViewController controller;
   double webprogress = 0;
- bool isLoading=true;
 
   _Web_ViewState(this.url);
 
   show() async {
     flag = await InternetConnectionChecker().hasConnection;
-    setState(() {
-
-    });
-  }
-
- Widget web(){
-  return  WebView(
-      initialUrl: url,
-      javascriptMode: JavascriptMode.unrestricted,
-     onPageStarted: (String url){
-        setState(() {
-          this.isLoading=true;
-          print("start");
-        });
-     },
-      onPageFinished: (String url){
-        setState(() {
-          this.isLoading=false;
-          print("finish");
-
-        });
-      },
-
-    onProgress: (progress) {
-      setState(() {
-        this.webprogress = progress / 100;
-        this.isLoading=false;
-        print("loading");
-
-      });
-    },
-
-    );
+    setState(() {});
   }
 
   @override
   void didUpdateWidget(covariant Web_View oldWidget) {
     super.didUpdateWidget(oldWidget);
     show();
+    print(flag);
   }
 
   @override
   Widget build(BuildContext context) {
-Future.delayed(Duration(milliseconds: 4000),(){
-    isLoading=false;
-
-});
-
     setState(() {
       show();
     });
-
 
     return flag
         ? Scaffold(
@@ -83,41 +45,34 @@ Future.delayed(Duration(milliseconds: 4000),(){
               foregroundColor: Colors.black,
               elevation: 0.2,
             ),
-            body: isLoading ?
-            Center(
-                  child: CircularProgressIndicator(),
-                )
-                : Column(
-                    children: [
-                      webprogress < 1
-                          ? SizedBox(
-                              child: LinearProgressIndicator(
-                                value: webprogress,
-                                color: Colors.red,
-                                backgroundColor: Colors.black,
-                              ),
-                            )
-                          : SizedBox(),
-                      Expanded(
-                        child:  WebView(
-                          initialUrl: url,
-                          javascriptMode: JavascriptMode.unrestricted,
-
-                          onProgress: (progress) {
-                            setState(() {
-                              this.webprogress = progress / 100;
-
-                            });
-                          },
-
+            body: Column(
+              children: [
+                webprogress < 1
+                    ? SizedBox(
+                        child: LinearProgressIndicator(
+                          value: webprogress,
+                          color: Colors.red,
+                          backgroundColor: Colors.black,
                         ),
-                        ),
-                    ],
+                      )
+                    : SizedBox(),
+                Expanded(
+                  child: WebView(
+                    initialUrl: url,
+                    javascriptMode: JavascriptMode.unrestricted,
+                    onProgress: (progress) {
+                      setState(() {
+                        this.webprogress = progress / 100;
+                      });
+                    },
                   ),
+                ),
+              ],
+            ),
             floatingActionButton: FloatingActionButton(
               onPressed: () async {
                 controller.loadUrl(
-                    url);
+                    'https://www.youtube.com/channel/UC7LI0mBeuP5zzrCf8t-vNlg');
               },
               child: Icon(Icons.import_export),
             ),
